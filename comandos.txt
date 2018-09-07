@@ -1,0 +1,23 @@
+Crear controlador con metodos definidos
+php artisan make:controller UsuariosController --resource
+
+Crear el modelo con la migracion
+php artisan make:model Usuario -m
+
+Ejecutar los archivos de migracion
+php artisan migrate
+
+Iniciar a manipular la base de datos
+php artisan tinker
+
+Manipular una tabla
+$usuario = new App\/*modelo*/Usuario();
+
+Ingresar un valor a una tabla
+$usuario->nombre = 'Ricardo Garcia';
+
+Salvar los datos en la tabla
+$usuario->save();
+
+Listar todos los datos de la tabla
+ App\Usuario::all();
