@@ -21,3 +21,9 @@ $usuario->save();
 
 Listar todos los datos de la tabla
  App\Usuario::all();
+
+Para instalar Bootstra 4
+Ejecutar comando npm install
+
+Mostrar automaticamente los cambios de la acrpeta
+npm run watch
