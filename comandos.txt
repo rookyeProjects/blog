@@ -27,3 +27,11 @@ Ejecutar comando npm install
 
 Mostrar automaticamente los cambios de la acrpeta
 npm run watch
+
+Para crear formularios es con Laravel Collective
+composer require "laravelcollective/html":"^5.4.0"
+
+Revisar documentacion, hay que agregar unas lineas a config/app.php
+
+Para crear un Provider
+php artisan make:provider FormServiceProvider
