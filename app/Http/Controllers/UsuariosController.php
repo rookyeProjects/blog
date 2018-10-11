@@ -15,7 +15,7 @@ class UsuariosController extends Controller
     public function index()
     {
         //$usuarios = Usuario::all();
-        $usuarios = Usuario::orderBy('create_at', 'desc')->get();
+        $usuarios = Usuario::orderBy('created_at', 'desc')->get();
         return view('usuarios.index')->with('usuarios', $usuarios);
     }
 
@@ -37,7 +37,7 @@ class UsuariosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 'enviado';
     }
 
     /**
