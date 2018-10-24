@@ -1,3 +1,15 @@
+/******************************************************
+    Para clonar el repositorio
+******************************************************/
+
+1.- Composer update
+2. crear archivo .env si no se creo con el comando anterior
+3.- pgp artisan key:generate
+
+/******************************************************
+    Comandos para Laravel
+******************************************************/
+
 Crear controlador con metodos definidos
 php artisan make:controller UsuariosController --resource
 
