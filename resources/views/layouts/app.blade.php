@@ -8,7 +8,7 @@
     <title>Lista de usuarios</title>
 </head>
 <body>
-    @yield('navbar')
+        @include('inc.navbar')
     <div class="container">
         @yield('content')
     </div>

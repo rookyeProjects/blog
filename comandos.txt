@@ -4,7 +4,7 @@
 
 1.- Composer update
 2. crear archivo .env si no se creo con el comando anterior
-3.- pgp artisan key:generate
+3.- php artisan key:generate
 
 /******************************************************
     Comandos para Laravel
