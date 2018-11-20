@@ -16,6 +16,7 @@ class FormServiceProvider extends ServiceProvider
     {
         Form::component('bsText', 'components.form.text', ['nombre', 'value' => null, 'attributes' => []]);
         Form::component('bsSubmit', 'components.form.submit', ['value' => 'Enviar', 'attributes' => []]);
+        Form::component('hidden', 'components.form.hidden', ['nombre', 'value' => null, 'attributes' => []]);
     }
 
     /**

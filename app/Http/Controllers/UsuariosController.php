@@ -63,7 +63,8 @@ class UsuariosController extends Controller
      */
     public function show($id)
     {
-        //
+        $usuario = Usuario::find($id);
+        return view('usuarios.detalle')->with('usuario', $usuario);
     }
 
     /**
@@ -74,7 +75,8 @@ class UsuariosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $usuario = Usuario::find($id);
+        return view('usuarios.editar')->with('usuario', $usuario);
     }
 
     /**
@@ -86,7 +88,23 @@ class UsuariosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $usuario = Usuario::find($id);
+
+        $this->validate($request, [
+            'nombre'  => 'required',
+            'email' => 'required',
+            'telefono' => 'required'
+
+        ]);
+
+        //Actualiar usuario
+        $usuario->nombre = $request->input('nombre');
+        $usuario->email = $request->input('email');
+        $usuario->telefono = $request->input('telefono');
+
+        $usuario->save();
+
+        return redirect('/')->with('success', 'Usuario Actualizado');
     }
 
     /**
@@ -97,6 +115,8 @@ class UsuariosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usuario = Usuario::find($id);
+        $usuario->delete();
+        return redirect('/')->with('success', 'Usuario Eliminado');
     }
 }

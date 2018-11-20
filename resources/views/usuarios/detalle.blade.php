@@ -9,6 +9,11 @@
             <div>{{$usuario->telefono}}</div>
             <br><br>
             <a href="/blog/public/usuario/{{$usuario->id}}/edit" class="btn btn-warning">Editar</a>
+            <br><br>
+            {!! Form::open(['action' => ['UsuariosController@destroy', $usuario->id], 'method' => 'POST']) !!}
+            {{Form::bsSubmit('Borrar', ['class' => 'btn btn-success float-right'])}}
+            {{Form::hidden('_method', 'DELETE')}}
+            {!! Form::close() !!}
         </div>
     </div>
 @endsection
